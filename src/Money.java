@@ -20,6 +20,6 @@ public class Money {
 
     @Override
     public int hashCode() {
-        return amount.hashCode();
+        return Objects.hash(amount.stripTrailingZeros(), currency);
     }
 }
